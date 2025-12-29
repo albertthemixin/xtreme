@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Карточка товара — XTREME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <span class="logo"></span>
+      <span>XTREME</span>
+    </a>
+
+    <nav class="nav">
+      <a class="chip" href="index.html">Главная</a>
+      <a class="chip chip--active" href="product.html">Товар</a>
+      <a class="chip" href="cart.html">Корзина <span class="cart-count">0</span></a>
+      <a class="chip" href="checkout.html">Оформление</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container section">
+
+  <!-- ================= ХУДИ MIDNIGHT ================= -->
+  <article class="product" id="midnight">
+    <div class="product__media">
+      <div class="thumb">
+            <img class="thumb__img" src="images/hoodie.jpg" alt="Худи “Midnight”" loading="lazy" />
+          </div>
+    </div>
+
+    <div class="product__info">
+      <h1>Худи “Midnight”</h1>
+      <p class="sku">Артикул: HW-001</p>
+
+      <p class="desc">
+        Плотное худи с мягким начёсом. Унисекс, свободная посадка,
+        отлично держит форму после стирок.
+      </p>
+
+      <div class="row">
+        <div class="select">
+          <label>Размер</label>
+          <select data-cart-size>
+            <option>S</option><option>M</option><option>L</option><option>XL</option>
+          </select>
+        </div>
+        <div class="select">
+          <label>Цвет</label>
+          <select data-cart-color>
+            <option>Чёрный</option>
+          </select>
+        </div>
+        <div class="select">
+          <label>Количество</label>
+          <input type="number" value="1" min="1" data-cart-qty>
+        </div>
+      </div>
+
+      <div class="sum">
+        <div>
+          <div class="kicker">Цена</div>
+          <div class="bigprice">3 990 ₽</div>
+        </div>
+        <button class="btn btn--accent" type="button" data-add-to-cart data-scope="closest-article" data-product-id="midnight">Добавить в корзину</button>
+        <a class="btn btn-link" href="cart.html">Перейти в корзину →</a>
+      </div>
+    </div>
+  </article>
+
+  <hr class="hr">
+
+  <!-- ================= ФУТБОЛКА CORE ================= -->
+  <article class="product" id="core">
+    <div class="product__media">
+      <div class="thumb">
+            <img class="thumb__img" src="images/tshirt.jpg" alt="Футболка “Core”" loading="lazy" />
+          </div>
+    </div>
+
+    <div class="product__info">
+      <h1>Футболка “Core”</h1>
+      <p class="sku">Артикул: TS-014</p>
+
+      <p class="desc">
+        Базовая футболка из 100% хлопка. Оверсайз крой,
+        подходит для повседневных образов.
+      </p>
+
+      <div class="row">
+        <div class="select">
+          <label>Размер</label>
+          <select data-cart-size>
+            <option>S</option><option>M</option><option>L</option><option>XL</option>
+          </select>
+        </div>
+        <div class="select">
+          <label>Цвет</label>
+          <select data-cart-color>
+            <option>Чёрный</option>
+          </select>
+        </div>
+        <div class="select">
+          <label>Количество</label>
+          <input type="number" value="1" min="1" data-cart-qty>
+        </div>
+      </div>
+
+      <div class="sum">
+        <div>
+          <div class="kicker">Цена</div>
+          <div class="bigprice">1 490 ₽</div>
+        </div>
+        <button class="btn btn--accent" type="button" data-add-to-cart data-scope="closest-article" data-product-id="core">Добавить в корзину</button>
+        <a class="btn btn-link" href="cart.html">Перейти в корзину →</a>
+      </div>
+    </div>
+  </article>
+
+  <hr class="hr">
+
+  <!-- ================= БРЮКИ STREET FIT ================= -->
+  <article class="product" id="street">
+    <div class="product__media">
+      <div class="thumb">
+            <img class="thumb__img" src="images/pants.jpg" alt="Брюки “Street Fit”" loading="lazy" />
+          </div>
+    </div>
+
+    <div class="product__info">
+      <h1>Брюки “Street Fit”</h1>
+      <p class="sku">Артикул: PT-221</p>
+
+      <p class="desc">
+        Свободные брюки с эластичным поясом.
+        Подходят для города и активного образа жизни.
+      </p>
+
+      <div class="row">
+        <div class="select">
+          <label>Размер</label>
+          <select data-cart-size>
+            <option>S</option><option>M</option><option>L</option>
+          </select>
+        </div>
+        <div class="select">
+          <label>Цвет</label>
+          <select data-cart-color>
+            <option>Чёрный</option>
+          </select>
+        </div>
+        <div class="select">
+          <label>Количество</label>
+          <input type="number" value="1" min="1" data-cart-qty>
+        </div>
+      </div>
+
+      <div class="sum">
+        <div>
+          <div class="kicker">Цена</div>
+          <div class="bigprice">2 990 ₽</div>
+        </div>
+        <button class="btn btn--accent" type="button" data-add-to-cart data-scope="closest-article" data-product-id="street">Добавить в корзину</button>
+        <a class="btn btn-link" href="cart.html">Перейти в корзину →</a>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © XTREME
+  </div>
+</footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

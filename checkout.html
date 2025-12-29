@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оформление заказа — XTREME</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>XTREME</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="product.html">Товар</a>
+        <a class="cart-pill" href="cart.html">Корзина <span class="cart-count">0</span></a>
+        <a href="checkout.html">Оформление</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid grid-2" style="margin-top:18px">
+      <section class="card">
+        <div class="card-body">
+          <h1 class="card-title" style="font-size:26px">Оформление заказа</h1>
+      
+          <div class="hr"></div>
+
+          <form class="form" action="#" method="post" data-checkout-form>
+            <div class="field">
+              <label for="name">Имя и фамилия</label>
+              <input id="name" name="name" type="text" placeholder="Альберт Мухаметзянов" required />
+            </div>
+
+            <div class="grid grid-2">
+              <div class="field">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" placeholder="+7 ..." required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="albert@gmail.com" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="city">Город</label>
+              <input id="city" name="city" type="text" placeholder="Москва" required />
+            </div>
+
+            <div class="field">
+              <label for="address">Адрес</label>
+              <input id="address" name="address" type="text" placeholder="Улица, дом, квартира" required />
+              <div class="help">Например: ул. Красная Пресня, 23, квартира 153 </div>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="field">
+                <label for="delivery">Доставка</label>
+                <select id="delivery" name="delivery" required>
+                  <option value="" selected disabled>Выберите способ</option>
+                  <option>Курьер (сегодня)</option>
+                  <option>Пункт выдачи (1–2 дня)</option>
+                  <option>Почта (3–5 дней)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="payment">Оплата</label>
+                <select id="payment" name="payment" required>
+                  <option value="" selected disabled>Выберите способ</option>
+                  <option>Картой онлайн</option>
+                  <option>При получении</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="comment">Комментарий</label>
+              <textarea id="comment" name="comment" placeholder="Пожелания по доставке, домофон и т. п."></textarea>
+            </div>
+
+            <button class="btn btn-success" type="submit">Подтвердить заказ</button>
+            <a class="btn btn-link" href="cart.html">← Назад в корзину</a>
+          </form>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div class="card-body">
+          <h2 class="card-title">Ваш заказ</h2>
+          <p class="small">Итог и список товаров берутся из корзины.</p>
+
+          <div class="hr"></div>
+
+          <div id="checkout-items"></div>
+          <div class="hr"></div>
+          <div id="checkout-totals">
+          <div class="hr"></div>
+          <div class="total-row"><span>Товары</span><strong id="checkout-subtotal">0 ₽</strong></div>
+          <div class="total-row"><span>Скидка</span><strong id="checkout-discount">0 ₽</strong></div>
+          <div class="total-row"><span>Доставка</span><strong id="checkout-shipping">0 ₽</strong></div>
+          <div class="hr"></div>
+          <div class="total-row" style="font-size:18px">
+            <span><strong>К оплате</strong></span>
+            <strong id="checkout-total">0 ₽</strong>
+          </div>
+
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="badge">Безопасная оплата</div>
+
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="small">© XTREME</div>
+    </footer>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

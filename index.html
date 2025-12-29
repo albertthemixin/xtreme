@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XTREME — магазин одежды</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="На главную">
+        <span class="logo" aria-hidden="true"></span>
+        <span>XTREME</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Навигация">
+        <a href="index.html">Главная</a>
+        <a href="product.html">Товар</a>
+        <a class="cart-pill" href="cart.html">
+          Корзина <span class="cart-count" aria-label="Количество товаров">0</span>
+        </a>
+        <a href="checkout.html">Оформление</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <span class="badge">Новая коллекция • Зима 2025</span>
+        <h1>Одежда, которая выглядит дорого — без переплат</h1>
+        <p>Сертифицированно музыкантами России</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#catalog">Смотреть каталог</a>
+          <a class="btn btn-link" href="product.html">Открыть карточку товара →</a>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="grid grid-2">
+          <div class="feature">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <strong>Быстрая доставка</strong><br />
+              <span class="small">По городу — от 2 часов</span>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <strong>Возврат 14 дней</strong><br />
+              <span class="small">Если не подошло — вернём</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Акция недели</h2>
+          <p class="small">Скидка на базовые вещи: худи, футболки, брюки.</p>
+          <div class="hr"></div>
+          <a class="btn btn-success" href="cart.html">Перейти в корзину</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" style="margin-top:22px">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Каталог</h2>
+          <p class="small">Нажми на товар, чтобы открыть карточку.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:16px">
+        <article class="card">
+          <div class="thumb">
+            <img class="thumb__img" src="images/hoodie.jpg" alt="Худи “Midnight”" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="product.html">Худи “Midnight”</a></h3>
+            <div class="card-meta">
+              <span class="price">3 990 ₽</span>
+              <span class="strike">4 990 ₽</span>
+              <span class="badge">Хит</span>
+            </div>
+            <div class="hr"></div>
+            <a class="btn btn-primary" href="product.html#midnight">Открыть</a>
+            <button class="btn btn-success" type="button" data-add-to-cart data-product-id="midnight">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img class="thumb__img" src="images/tshirt.jpg" alt="Футболка “Core”" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="product.html">Футболка “Core”</a></h3>
+            <div class="card-meta">
+              <span class="price">1 490 ₽</span>
+              <span class="badge">100% хлопок</span>
+            </div>
+            <div class="hr"></div>
+            <a class="btn" href="product.html#core">Открыть</a>
+            <button class="btn btn-success" type="button" data-add-to-cart data-product-id="core">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img class="thumb__img" src="images/pants.jpg" alt="Брюки “Street Fit”" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a href="product.html">Брюки “Street Fit”</a></h3>
+            <div class="card-meta">
+              <span class="price">2 990 ₽</span>
+              <span class="badge">Свободный крой</span>
+            </div>
+            <div class="hr"></div>
+            <a class="btn" href="product.html#street">Открыть</a>
+            <button class="btn btn-success" type="button" data-add-to-cart data-product-id="street">В корзину</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="small">© XTREME</div>
+    </footer>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Корзина — XTREME</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>XTREME</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="product.html">Товар</a>
+        <a class="cart-pill" href="cart.html">Корзина <span class="cart-count">0</span></a>
+        <a href="checkout.html">Оформление</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" style="margin-top:18px">
+      <div class="card-body">
+        <h1 class="card-title" style="font-size:26px">Корзина</h1>
+
+        <div class="hr"></div>
+        <p id="cart-empty" class="small" hidden>Корзина пуста. <a class="btn btn-link" href="index.html">Перейти в каталог</a></p>
+
+        <div style="overflow:auto">
+          <table class="table" aria-label="Товары в корзине">
+            <thead>
+              <tr>
+                <th>Товар</th>
+                <th>Параметры</th>
+                <th>Цена</th>
+                <th>Кол-во</th>
+                <th>Итого</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+          </table>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="grid grid-2">
+          <div>
+            <a class="btn btn-link" href="index.html">← Продолжить покупки</a>
+          </div>
+
+          <div class="total-box" id="cart-box">
+            <div class="total-row"><span>Товары</span><strong id="subtotal">0 ₽</strong></div>
+            <div class="total-row"><span>Доставка</span><strong id="shipping">0 ₽</strong></div>
+            <div class="total-row"><span>Скидка</span><strong id="discount">0 ₽</strong></div>
+            <div class="hr"></div>
+            <div class="total-row" style="font-size:18px">
+              <span><strong>К оплате</strong></span>
+              <strong id="total">0 ₽</strong>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+              <a class="btn btn-success" href="checkout.html">Оформить заказ</a>
+              <button class="btn btn-danger" type="button" id="cart-clear">Очистить корзину</button>
+            </div>
+
+            <p class="small" style="margin-top:10px">* Скидка в демо: -400 ₽ при сумме от 5 000 ₽.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="small">© XTREME</div>
+    </footer>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
